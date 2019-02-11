@@ -154,7 +154,7 @@
                         } else if(0 != prmDblPrevPrice && prmDblPrevPrice > prmDblPrice) {
                             untDownCounter++;
                         }
-                        priceDoughnutChart.data.datasets[0].data = [untUpCounter, untDownCounter];
+                        priceDoughnutChart.data.datasets[0].data = [untDownCounter, untUpCounter];
                         priceDoughnutChart.update();
                         prmDblPrevPrice = prmDblPrice;
 
