@@ -14,7 +14,7 @@ class PriceController extends Controller
      */
     public function index()
     {
-        $prices = Price::latest()->paginate(4);
+        $prices = Price::latest()->paginate(5);
         return view('prices.index',compact('prices'))
             ->with('i', (request()->input('page', 1) - 1) * 1);
     }

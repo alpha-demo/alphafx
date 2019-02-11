@@ -3,7 +3,7 @@
     Author: Aljandro D. Bakker Antezana
     Version: 1.0
     Creation Date: 2019+02+09
-    Modification Date: 2019+02+09
+    Modification Date: 2019+02+11
 */
 
 body {
@@ -13,8 +13,8 @@ body {
     background-image: url("../img/img_web_background.jpg");
     background-repeat: no-repeat;
     background-position: top right;
-    max-width: 100%;
-    overflow: hidden;
+    max-width: 100% ! important;
+    /*overflow: hidden*/;
 }
 
 a, .card a {
@@ -23,21 +23,28 @@ a, .card a {
 
 .cls-welcome-title {
     width: 100%;
-    margin-top: 21px;
     margin-bottom: 28px;
     text-align: center;
     font-weight: bolder;
 }
 
 .cls-float-left {
-    height: 350px;
+    height: 420px;
     margin-left: 11px;
     margin-right: 11px;
     float: left;
 }
 
+.cls-demo-description {
+    margin-top: 35px;
+}
+
 .cls-card-description {
     text-align: center;
+}
+
+.cls-row {
+    margin-bottom: 91px;
 }
 
 a:hover, .card a:hover {
@@ -77,6 +84,7 @@ a:hover, .card a:hover {
     border-radius: 7px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
     overflow: hidden;
+    margin-bottom: 0px ! important;
 }
 
 .btn-primary {

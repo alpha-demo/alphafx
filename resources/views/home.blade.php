@@ -9,8 +9,37 @@
         <h5>Real Info @ Real Time</h5>
     </div>
 </div>
-<div class="row justify-content-center">
+
+<div class="row justify-content-center cls-row">
+    <div class="col-md-10" >
+        <div class="card">
+            <div class="card-header">Price/Time</div>
+            <div class="card-body">
+                <div>
+                    <canvas id="priceLineChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="cls-card-description">
+            Linear Representation of the Price Changes [updated every 3 seconds]
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center cls-row">
+
     <div class="col-md-3 cls-float-left" >
+        <div class="cls-demo-description">
+            <h4>Description</h4><br>
+            <p>This is a code Demo built on PHP Laravel 5.7 Framework.</p>
+            <P>With the MVC Software Architecture: Using PHP code for the Controller functions, MySql as  the source of data (with PHP Modeling it) and the Blade Templates + jQuery & ChartJs Libraries for the View.</P>
+            <p>First it retrieves the Real Info @ Real Time, of the exchange rate of EUR/USD, from a remote API (https://forex.1forge.com) using Ajax, then the received info in Json format is saved in the MySql Database, and then the Table and Charts are renewed too.</p>
+            <p>Enjoy it,</p>
+            <p>Alejandro D. Bakker Antezana</p>
+        </div>
+    </div>
+
+    <div class="col-md-4 cls-float-left" >
         <div class="card">
             <div class="card-header">History Table</div>
             <div class="card-body">
@@ -26,26 +55,11 @@
             </div>
         </div>
         <div class="cls-card-description">
-                <i class="material-icons">access_time</i> updated 4 minutes ago
+            History of Price Changes [updated every 3 seconds]
         </div>
     </div>
 
-
-    <div class="col-md-5 cls-float-left" >
-        <div class="card">
-            <div class="card-header">Price/Time</div>
-            <div class="card-body">
-                <div>
-                    <canvas id="priceLineChart"></canvas>
-                </div>
-            </div>
-        </div>
-        <div class="cls-card-description">
-            <i class="material-icons">access_time</i> updated 4 minutes ago
-        </div>
-    </div>
-
-    <div class="col-md-3 cls-float-left" >
+    <div class="col-md-4 cls-float-left" >
         <div class="card">
             <div class="card-header">Up Or Down</div>
             <div class="card-body">
@@ -53,16 +67,16 @@
             </div>
         </div>
         <div class="cls-card-description">
-            <i class="material-icons">access_time</i> updated 4 minutes ago
+            Counting of Price Up & Downs [updated every 3 seconds]
         </div>
     </div>
-
 </div>
+
 </script><script type="application/javascript" src="{{ URL::to('js/Chart.bundle.min.js') }}"></script>
 <script>
     
     // Vars & Consts
-    let untQtyPoints    = 5;
+    let untQtyPoints    = 7;
     let untUpCounter    = 1;
     let untDownCounter  = 1;
 
@@ -99,7 +113,7 @@
         let priceDoughnutChart = new Chart(contextPriceDoughnutChartJs, {
             type: 'doughnut',
             data: {
-                labels: ["DESCENDENTE", "ASCENDENTE"],
+                labels: ["Descendent", "Ascendent"],
                 datasets: [{
                     data: [],
                     borderColor: ['#fff', '#fff', ],
@@ -111,7 +125,6 @@
                 maintainAspectRatio: false,
             }
         });
-
 
         // Ajax to receive an updated info in Json format from a remote API
         function retrieveNewInfo() {
