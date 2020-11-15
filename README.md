@@ -1,6 +1,6 @@
 # Alpha + Demo  
 
-   This is a code Demo built on PHP Laravel 5.7 Framework. 
+   This is a code Demo built on PHP Laravel 5.7 Framework. (upgraded to Laravel Framework 6.20.3) 
 
    With the MVC Software Architecture: Using PHP code for the Controller functions, MySql as  the source of data (with PHP Modeling it) and the Blade Templates + jQuery & ChartJs Libraries for the View.
 
